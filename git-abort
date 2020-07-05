@@ -1,3 +1,6 @@
-cd ~/source/linux/linux-pdx86
-git am --abort
-rm -f ~/incoming/*
+#!/bin/bash
+
+export TOPDIR=$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
+source $TOPDIR/env
+git -C $GIT_TREE am --abort
+rm -f $INCOMING/*

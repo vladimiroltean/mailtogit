@@ -1,2 +1,5 @@
-cd ~/source/linux/linux-pdx86/
-git am -s ~/incoming/*.mbox
+#!/bin/bash
+
+export TOPDIR=$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
+source $TOPDIR/env
+git -C $GIT_TREE am -s $INCOMING/*.mbox

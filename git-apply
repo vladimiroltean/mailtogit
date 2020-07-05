@@ -1,3 +1,7 @@
-rm -f ~/incoming/*
-~/bin/mutt/mail-to-mbox
-~/bin/mutt/git-apply-incoming
+#!/bin/bash
+
+export TOPDIR=$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
+source $TOPDIR/env
+rm -f $INCOMING/*
+$TOPDIR/mail-to-mbox
+$TOPDIR/git-apply-incoming

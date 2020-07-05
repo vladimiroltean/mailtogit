@@ -1,2 +1,5 @@
-cd ~/source/linux/linux-pdx86/
-scripts/checkpatch.pl ~/incoming/*
+#!/bin/bash
+
+export TOPDIR=$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
+source $TOPDIR/env
+$GIT_TREE/scripts/checkpatch.pl $INCOMING/*

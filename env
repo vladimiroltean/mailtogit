@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export INCOMING=~/incoming/
+export GIT_TREE=/opt/linux

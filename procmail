@@ -1,1 +1,5 @@
-/usr/bin/procmail -m ~/bin/mutt/procmailrc -
+#!/bin/bash
+
+export TOPDIR=$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
+source $TOPDIR/env
+/usr/bin/procmail -m $TOPDIR/procmailrc -

@@ -1,2 +1,6 @@
-formail -cds ~/bin/mutt/procmail -
-ls -l ~/incoming/
+#!/bin/bash
+
+export TOPDIR=$(cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)
+source $TOPDIR/env
+formail -cds $TOPDIR/procmail -
+ls -l $INCOMING
